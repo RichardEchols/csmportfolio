@@ -71,7 +71,6 @@ const formatPercent = (value) => {
 const LandingPage = ({ onNavigate }) => {
   return (
     <div className="min-h-screen bg-slate-900 text-white">
-      {/* Hero Section */}
       <div className="max-w-5xl mx-auto px-6 py-16">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Richard Echols</h1>
@@ -79,7 +78,6 @@ const LandingPage = ({ onNavigate }) => {
           <p className="text-slate-500">IBM | TBM/FinOps | AI-Assisted Analytics</p>
         </div>
 
-        {/* Contact Links */}
         <div className="flex justify-center gap-4 mb-12 flex-wrap">
           <a href="https://www.linkedin.com/in/richard-echols/" target="_blank" rel="noopener noreferrer" 
              className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors flex items-center gap-2">
@@ -96,7 +94,6 @@ const LandingPage = ({ onNavigate }) => {
           </a>
         </div>
 
-        {/* About Section */}
         <div className="bg-slate-800 rounded-2xl p-6 mb-12">
           <h2 className="text-xl font-semibold mb-4">About This Portfolio</h2>
           <p className="text-slate-300 leading-relaxed">
@@ -107,7 +104,6 @@ const LandingPage = ({ onNavigate }) => {
           </p>
         </div>
 
-        {/* Dashboard Cards */}
         <h2 className="text-2xl font-bold mb-6 text-center">Portfolio Projects</h2>
         <div className="grid md:grid-cols-2 gap-6">
           
@@ -164,6 +160,58 @@ const LandingPage = ({ onNavigate }) => {
               View Dashboard →
             </button>
           </div>
+
+          {/* AI Chat Assistant */}
+          <a href="https://jwchat-pearl.vercel.app" target="_blank" rel="noopener noreferrer"
+             className="bg-slate-800 rounded-2xl p-6 border border-slate-700 hover:border-purple-500 transition-colors block">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2 bg-purple-500/20 rounded-lg">
+                <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold">AI Chat Assistant</h3>
+            </div>
+            <p className="text-slate-400 mb-4">
+              Full-stack AI chat application with user authentication, real-time persistence, 
+              and automated source citation using Google Custom Search API.
+            </p>
+            <div className="flex flex-wrap gap-2 mb-4">
+              <span className="px-2 py-1 bg-slate-700 rounded text-xs text-slate-300">Next.js 14</span>
+              <span className="px-2 py-1 bg-slate-700 rounded text-xs text-slate-300">Supabase</span>
+              <span className="px-2 py-1 bg-slate-700 rounded text-xs text-slate-300">Claude API</span>
+              <span className="px-2 py-1 bg-slate-700 rounded text-xs text-slate-300">Vercel</span>
+            </div>
+            <div className="w-full py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-medium transition-colors text-center">
+              View Live App →
+            </div>
+          </a>
+
+          {/* News Aggregator */}
+          <a href="https://goodnewsapp.vercel.app" target="_blank" rel="noopener noreferrer"
+             className="bg-slate-800 rounded-2xl p-6 border border-slate-700 hover:border-cyan-500 transition-colors block">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2 bg-cyan-500/20 rounded-lg">
+                <svg className="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold">Real-Time News Aggregator</h3>
+            </div>
+            <p className="text-slate-400 mb-4">
+              Dynamic news aggregation application with live API integration, 
+              real-time content updates, and responsive UI design.
+            </p>
+            <div className="flex flex-wrap gap-2 mb-4">
+              <span className="px-2 py-1 bg-slate-700 rounded text-xs text-slate-300">Next.js</span>
+              <span className="px-2 py-1 bg-slate-700 rounded text-xs text-slate-300">API Integration</span>
+              <span className="px-2 py-1 bg-slate-700 rounded text-xs text-slate-300">Vercel</span>
+            </div>
+            <div className="w-full py-3 bg-cyan-600 hover:bg-cyan-700 rounded-lg font-medium transition-colors text-center">
+              View Live App →
+            </div>
+          </a>
+
         </div>
 
         {/* Skills Section */}
@@ -178,7 +226,9 @@ const LandingPage = ({ onNavigate }) => {
               'SQL & Azure',
               'AI Forecasting',
               'QBR/EBR Delivery',
-              'Value Realization'
+              'Value Realization',
+              'Next.js/React',
+              'Full-Stack Dev'
             ].map((skill, idx) => (
               <div key={idx} className="px-3 py-2 bg-slate-700 rounded-lg text-sm text-center text-slate-300">
                 {skill}
@@ -187,7 +237,6 @@ const LandingPage = ({ onNavigate }) => {
           </div>
         </div>
 
-        {/* Footer */}
         <div className="mt-12 text-center text-slate-500 text-sm">
           Built with React + AI Assistance • © 2025 Richard Echols
         </div>
@@ -263,7 +312,6 @@ const ValueDashboard = ({ onBack }) => {
     <div className="min-h-screen bg-slate-900 text-white p-4 md:p-6">
       <div className="max-w-6xl mx-auto">
         
-        {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <div>
             <button onClick={onBack} className="text-slate-400 hover:text-white mb-2 flex items-center gap-1">
@@ -274,7 +322,6 @@ const ValueDashboard = ({ onBack }) => {
           </div>
         </div>
 
-        {/* Month Filter */}
         <div className="flex gap-2 mb-6 flex-wrap">
           <button onClick={() => setSelectedMonth('all')}
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedMonth === 'all' ? 'bg-blue-600 text-white' : 'bg-slate-800 text-slate-400 hover:bg-slate-700'}`}>
@@ -288,7 +335,6 @@ const ValueDashboard = ({ onBack }) => {
           ))}
         </div>
 
-        {/* Row 1: KPIs */}
         <div className="grid md:grid-cols-3 gap-4 mb-6">
           <div className={`p-6 rounded-xl border-l-4 ${variancePercent >= 0 ? 'bg-red-500/10 border-l-red-500' : 'bg-emerald-500/10 border-l-emerald-500'}`}>
             <p className="text-xs text-slate-400 uppercase tracking-wide mb-1">% Variance to Budget</p>
@@ -322,7 +368,6 @@ const ValueDashboard = ({ onBack }) => {
           </div>
         </div>
 
-        {/* Row 2: Waste */}
         <div className="grid md:grid-cols-3 gap-4 mb-6">
           <div className="bg-amber-500/10 border-l-4 border-l-amber-500 p-6 rounded-xl">
             <p className="text-xs text-slate-400 uppercase tracking-wide mb-1">Total Waste Identified</p>
@@ -374,7 +419,6 @@ const ValueDashboard = ({ onBack }) => {
           </div>
         </div>
 
-        {/* Accountability Matrix */}
         <div className="bg-slate-800 rounded-xl p-4">
           <div className="flex justify-between items-center mb-4">
             <div>
